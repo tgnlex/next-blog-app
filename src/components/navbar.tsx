@@ -1,5 +1,5 @@
 "use client"
-import './css/navbar.css';
+import '@/style/navbar.css';
 import Link from 'next/link';
 const Navbar = () => {
   return (
