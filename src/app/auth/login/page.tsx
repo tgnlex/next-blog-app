@@ -1,3 +1,4 @@
+import Link from 'next/link';
 export default function Login() {
   return (
     <main className="flex-col place-items-center">
@@ -13,6 +14,8 @@ export default function Login() {
         </label>
         <input id="submit-btn" type="submit" value="Submit" />
       </form>
+      <h1 className="text-4xl mt-10">Not a member?</h1>
+      <Link className="text-2xl mt-5" href="/auth/register">Click here to Register</Link>
     </main>
   )
 }

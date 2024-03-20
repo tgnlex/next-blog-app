@@ -1,0 +1,13 @@
+#btn-back {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  color: white;
+  border: 2px white groove;
+  padding: 3px;
+  text-shadow: 0 0 3px black;
+  border-radius: .4rem;
+  font-size: 18px;
+  background-color: rgba(210, 70, 70, .8);
+}
