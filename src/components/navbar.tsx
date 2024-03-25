@@ -9,13 +9,13 @@ const Navbar = () => {
           <Link href="/" className="nav-link text-2xl px-8">Home</Link>
         </li>
         <li className="nav-item ml-8 p-1">          
-          <Link href="/blog" className="nav-link text-2xl px-8">Blog</Link>
+          <Link href="/static/blog" className="nav-link text-2xl px-8">Blog</Link>
         </li> 
         <li className="nav-item ml-8 p-1">
-          <Link href="/profile" className="nav-link text-2xl px-8">Profile</Link>
+          <Link href="/static/profile" className="nav-link text-2xl px-8">Profile</Link>
         </li>
         <li className="nav-item ml-8 p-1">
-          <Link href="/about" className="nav-link text-2xl px-8">About</Link>
+          <Link href="/static/about" className="nav-link text-2xl px-8">About</Link>
         </li>
         <li className="nav-item ml-8 p-1">
           <Link href="/auth/login" className="nav-link text-2xl px-8">Login</Link>

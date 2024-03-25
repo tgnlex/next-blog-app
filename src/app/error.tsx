@@ -1,5 +1,5 @@
 "use client"
-import BackBtn from '@/components/btn-back';
+import BackBtn from '@/components/backBtn';
 export default function Error () {
   return (
     <main id="error" className="flex flex-col place-items-center mt-24">

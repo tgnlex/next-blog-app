@@ -16,7 +16,12 @@
   }
 }
 
+html, body {
+  height: 100%;
+}
 body {
+  display: flex;
+  flex-direction: column;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,6 +29,15 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+#bio {
+  height: 550px;
+}
+#page {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  place-content: center;
 }
 
 @layer utilities {
