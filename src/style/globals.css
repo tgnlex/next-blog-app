@@ -40,6 +40,8 @@ body {
   place-content: center;
 }
 
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

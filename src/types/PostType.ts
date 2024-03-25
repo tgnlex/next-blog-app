@@ -1,7 +1,10 @@
-interface PostType {
-  id: string, 
+export type PostType = {
+  id: number, 
   title: string, 
-  body: string
+  content: string, 
+  author: string, 
+  date: string,
+  category: string
 }
 
 export default PostType;
