@@ -17,7 +17,7 @@ export async function getPosts () {
 }
 
 export async function getPostByID (id: number) {
-  const res = await fetch(`/api.vercel.app/blog/${id}`)
+  const res = await fetch(`https://api.vercel.app/blog/${id}`)
   let data = res.json();
   return data
 

@@ -1,16 +1,23 @@
-import React from 'react'
 import {getPostByID} from '@/app/api/posts/route';
 import {Suspense} from 'react';
 import Loading from '@/app/loading';
-import {useSearchParams} from 'next/navigation';
-import Post from './showPost'
-async function Page ({slug}: {slug: number}) { 
-  const post = await getPostByID(slug)
+async function Page ({ slug}: { 
+   slug: {
+     slug: number;
+  }, 
+},
   
+)
+ { 
+  const post = await getPostByID(1)
+
   return (
     <Suspense fallback={<Loading />}>
       <div>
-      <Post post={post} />
+        <h1>{post.title}</h1>
+        <h2>By: {post.author}</h2>
+        <h3>{post.date}</h3>
+        <p>{post.content}</p>
       </div>
     </Suspense>
   )
