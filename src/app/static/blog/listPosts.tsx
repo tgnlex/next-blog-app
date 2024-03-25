@@ -1,5 +1,5 @@
 import React from 'react'
-import getPosts from '@/app/api/posts/route';
+import {getPosts} from '@/app/api/posts/route';
 import Link from 'next/link';
 import type Post from '@/types/PostType';
 async function ListPosts () {

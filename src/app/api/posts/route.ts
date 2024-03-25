@@ -1,16 +1,24 @@
 import NextCors from 'nextjs-cors';
-import {NextApiRequest, NextApiResponse} from 'next';
 
-async function getPosts () {   
+export async function getPosts () {   
 
   const res = await fetch('https://api.vercel.app/blog', {
       headers: {
         "Access-Control-Allow-Origin": "*"
       }
   })
-  console.log(res.headers);
-  return res.json();
+  if (!res.ok) {
+    throw new Error;
 
+  }
+  console.log(res.headers);
+  const data = res.json();
+  return data;
 }
 
-export default getPosts;
+export async function getPostByID (id: number) {
+  const res = await fetch(`/api.vercel.app/blog/${id}`)
+  let data = res.json();
+  return data
+
+}

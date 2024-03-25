@@ -1,20 +1,16 @@
-'use client'
 import React from 'react'
-import getPosts from '@/app/api/posts/route';
+import {getPostByID} from '@/app/api/posts/route';
 import {Suspense} from 'react';
 import Loading from '@/app/loading';
 import {useSearchParams} from 'next/navigation';
 import Post from './showPost'
- const Page = ({slug}: {
-  slug: number, 
-  }) => { 
-  const query = useSearchParams();
-  const q = query.get('slug'); 
-  const id = Number(q);
+async function Page ({slug}: {slug: number}) { 
+  const post = await getPostByID(slug)
+  
   return (
     <Suspense fallback={<Loading />}>
       <div>
-        <Post id={id} />
+      <Post post={post} />
       </div>
     </Suspense>
   )

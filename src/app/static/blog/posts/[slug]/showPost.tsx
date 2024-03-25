@@ -1,11 +1,10 @@
 import React from 'react'
 import Post from '@/types/PostType' ;
-import getPosts from '@/app/api/posts/route'
-async function Post({id} : {
-  id: number, 
+import {getPostByID} from '@/app/api/posts/route'
+async function BlogPost({post}: {
+  post: Post;
 }) {
-  const posts = await getPosts()
-  const post: Post = posts[id];
+
   return (
     <div>
        <div className="container flex flex-col place-items-center place-content-center" id="page">
@@ -18,4 +17,4 @@ async function Post({id} : {
   )
 }
 
-export default Post;
+export default BlogPost;
